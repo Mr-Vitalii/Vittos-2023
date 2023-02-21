@@ -171,7 +171,7 @@ class TaskView {
         element.append(this.div);
     }
 
-    changeState(element) {
+    changeState() {
         this.task.isDone = !this.task.isDone;
         dataService.save();
         this.div.classList.toggle("completed");
@@ -306,6 +306,8 @@ themeSwitch.addEventListener("click", function () {
     footerList.classList.toggle('dark');
 })
 
-
+new Sortable(taskListMain, {
+    animation: 350
+})
 
 
